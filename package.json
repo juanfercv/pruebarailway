@@ -1,0 +1,40 @@
+{
+  "name": "socialsoccervue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port $PORT"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
+    "axios": "^1.7.9",
+    "chart.js": "^4.4.3",
+    "path-browserify": "^1.0.1",
+    "sweetalert2": "^11.12.4",
+    "swiper": "^11.2.2",
+    "vue": "^3.4.29",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.3.5"
+  },
+  "description": "El proyecto que bancan chat XD\r el porytecto",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "20.x"
+  }
+}

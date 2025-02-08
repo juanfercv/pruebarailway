@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Soccer</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor del fondo */
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image: url('/assets/perfil/fondo.jpg');
+      filter: blur(5px);
+      z-index: 0;
+    }
+
+    /* Contenedor de la aplicación */
+    #app {
+      position: relative;
+      z-index: 10;
+      height: 100vh;
+      width: 100vw;
+      opacity: 0; /* Comienza invisible */
+        transition: opacity 1s ease-in-out; /* Animación suave */
+    }
+
+    /* Animación: mostrar el contenido */
+    #app.visible {
+        opacity: 1; /* Aparecer */
+      }
+  </style>
+</head>
+<body>
+  <!-- Fondo difuminado -->
+  <div id="background"></div>
+
+  <!-- Contenido principal -->
+  <div id="app" class="overflow-hidden"></div>
+
+  <!-- Script principal -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- Script para manejar la animación -->
+  <script>
+    window.addEventListener('load', () => {
+      // Mostrar el contenido principal después de 1 segundo
+      setTimeout(() => {
+        const app = document.getElementById('app');
+
+        // Activar la animación agregando la clase 'visible'
+        app.classList.add('visible');
+      }, 1000); // 1 segundo de retraso
+    });
+  </script>
+</body>
+</html>
